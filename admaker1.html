@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Ad Generator</title>
+
+<style>
+body{
+font-family: Arial;
+background:#111;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+input{
+padding:10px;
+width:300px;
+margin:10px;
+font-size:16px;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+background:#00c853;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+#output{
+margin-top:30px;
+background:#222;
+padding:20px;
+border-radius:10px;
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>AI Ad Generator</h1>
+
+<input id="product" placeholder="Enter product name">
+
+<br>
+
+<button onclick="generateAd()">Generate Ad</button>
+
+<div id="output">Your ad will appear here</div>
+
+<script>
+
+function generateAd(){
+
+let product=document.getElementById("product").value;
+
+let ads=[
+"?? Limited time offer on "+product+"! Grab yours today!",
+"?? Upgrade your life with "+product+". Shop now!",
+"?? Don't miss the deal on "+product+"!",
+"? Discover the power of "+product+" today!"
+];
+
+let random=ads[Math.floor(Math.random()*ads.length)];
+
+document.getElementById("output").innerText=random;
+
+}
+
+</script>
+
+</body>
+
+</html>
